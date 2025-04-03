@@ -37,7 +37,7 @@ export const users: User[] = [
     name: 'Olivia Davis',
     username: 'oliviafit',
     avatar: 'https://i.pravatar.cc/150?img=9',
-    bio: 'HIIT trainer and runner. Let's get moving!',
+    bio: 'HIIT trainer and runner. Let\'s get moving!',
     fitnessGoals: ['Lose Weight', 'Improve Endurance'],
     following: 187,
     followers: 623,
