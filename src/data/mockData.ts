@@ -1,0 +1,241 @@
+
+import { User, WorkoutPlan, Activity, Challenge, FitnessGoal } from '../types';
+
+export const users: User[] = [
+  {
+    id: '1',
+    name: 'Alex Johnson',
+    username: 'alexfit',
+    avatar: 'https://i.pravatar.cc/150?img=1',
+    bio: 'Fitness enthusiast. Marathon runner. Personal trainer.',
+    fitnessGoals: ['Build Muscle', 'Improve Endurance'],
+    following: 245,
+    followers: 1024,
+  },
+  {
+    id: '2',
+    name: 'Samantha Lee',
+    username: 'samfit',
+    avatar: 'https://i.pravatar.cc/150?img=5',
+    bio: 'Yoga instructor and nutritionist. Believe in balance.',
+    fitnessGoals: ['Increase Flexibility', 'Overall Health'],
+    following: 352,
+    followers: 2431,
+  },
+  {
+    id: '3',
+    name: 'Mike Chen',
+    username: 'mikefitness',
+    avatar: 'https://i.pravatar.cc/150?img=3',
+    bio: 'Bodybuilder. Competing since 2018.',
+    fitnessGoals: ['Build Muscle'],
+    following: 128,
+    followers: 876,
+  },
+  {
+    id: '4',
+    name: 'Olivia Davis',
+    username: 'oliviafit',
+    avatar: 'https://i.pravatar.cc/150?img=9',
+    bio: 'HIIT trainer and runner. Let's get moving!',
+    fitnessGoals: ['Lose Weight', 'Improve Endurance'],
+    following: 187,
+    followers: 623,
+  },
+];
+
+export const workoutPlans: WorkoutPlan[] = [
+  {
+    id: '1',
+    title: '30-Day Strength Challenge',
+    description: 'Build muscle and strength with this 30-day challenge. Suitable for all levels.',
+    author: users[0],
+    duration: '30 days',
+    difficulty: 'Intermediate',
+    category: 'Strength',
+    likes: 532,
+    saved: 245,
+    exercises: [
+      {
+        id: '1',
+        name: 'Push-ups',
+        sets: 3,
+        reps: 12,
+        instructions: 'Keep your body straight and core engaged',
+      },
+      {
+        id: '2',
+        name: 'Squats',
+        sets: 4,
+        reps: 15,
+        instructions: 'Push through your heels, keep chest up',
+      },
+      {
+        id: '3',
+        name: 'Dumbbell Rows',
+        sets: 3,
+        reps: 10,
+        instructions: 'Keep back straight, pull elbow up towards ceiling',
+      },
+    ],
+  },
+  {
+    id: '2',
+    title: 'Morning Yoga Flow',
+    description: 'Start your day right with this energizing yoga flow. Focus on flexibility and mindfulness.',
+    author: users[1],
+    duration: '20 minutes',
+    difficulty: 'Beginner',
+    category: 'Flexibility',
+    likes: 345,
+    saved: 189,
+    exercises: [
+      {
+        id: '1',
+        name: 'Sun Salutations',
+        sets: 1,
+        reps: 5,
+        instructions: 'Flow through the sequence mindfully',
+      },
+      {
+        id: '2',
+        name: 'Warrior Series',
+        sets: 1,
+        reps: 1,
+        duration: '5 minutes',
+        instructions: 'Hold each pose for 30 seconds',
+      },
+      {
+        id: '3',
+        name: 'Cool Down Stretches',
+        sets: 1,
+        reps: 1,
+        duration: '5 minutes',
+        instructions: 'Breathe deeply into each stretch',
+      },
+    ],
+  },
+  {
+    id: '3',
+    title: 'HIIT Cardio Blast',
+    description: 'Intense cardio workout to burn calories and improve endurance.',
+    author: users[3],
+    duration: '25 minutes',
+    difficulty: 'Advanced',
+    category: 'HIIT',
+    likes: 421,
+    saved: 213,
+    exercises: [
+      {
+        id: '1',
+        name: 'Burpees',
+        sets: 4,
+        reps: 15,
+        instructions: 'Go all out, minimal rest',
+      },
+      {
+        id: '2',
+        name: 'Mountain Climbers',
+        sets: 4,
+        reps: 30,
+        instructions: 'Keep hips low, alternate knees quickly',
+      },
+      {
+        id: '3',
+        name: 'Jump Squats',
+        sets: 4,
+        reps: 20,
+        instructions: 'Explode up, soft landing',
+      },
+    ],
+  },
+];
+
+export const activities: Activity[] = [
+  {
+    id: '1',
+    user: users[0],
+    type: 'workout',
+    content: 'Just completed day 15 of my strength program! Feeling stronger every day.',
+    workout: workoutPlans[0],
+    timestamp: '2025-04-02T10:30:00Z',
+    likes: 42,
+    comments: 8,
+  },
+  {
+    id: '2',
+    user: users[1],
+    type: 'achievement',
+    content: 'Hit a new personal record: 5 minute plank! 🎉',
+    timestamp: '2025-04-02T08:15:00Z',
+    likes: 67,
+    comments: 12,
+  },
+  {
+    id: '3',
+    user: users[2],
+    type: 'workout',
+    content: 'Morning lift session complete. Arms day is the best day!',
+    timestamp: '2025-04-01T07:45:00Z',
+    likes: 38,
+    comments: 5,
+  },
+  {
+    id: '4',
+    user: users[3],
+    type: 'challenge',
+    content: 'Just joined the Spring 5K Challenge. Who else is in?',
+    timestamp: '2025-04-01T15:20:00Z',
+    likes: 24,
+    comments: 15,
+  },
+  {
+    id: '5',
+    user: users[0],
+    type: 'goal',
+    content: 'New goal: 10,000 steps every day this month!',
+    timestamp: '2025-03-31T18:45:00Z',
+    likes: 51,
+    comments: 7,
+  },
+];
+
+export const challenges: Challenge[] = [
+  {
+    id: '1',
+    title: 'Spring 5K Challenge',
+    description: 'Train for and complete a 5K run this spring. Open to all levels!',
+    participants: 256,
+    startDate: '2025-04-01',
+    endDate: '2025-05-15',
+    progress: 0.25,
+  },
+  {
+    id: '2',
+    title: '30-Day Plank Challenge',
+    description: 'Increase your core strength with a daily plank. Starts with 30 seconds, ends with 5 minutes!',
+    participants: 412,
+    startDate: '2025-04-10',
+    endDate: '2025-05-10',
+    progress: 0,
+  },
+  {
+    id: '3',
+    title: '100 Push-up Challenge',
+    description: 'Can you work up to 100 push-ups in a single set? Join us to find out!',
+    participants: 178,
+    startDate: '2025-03-15',
+    endDate: '2025-04-15',
+    progress: 0.75,
+  },
+];
+
+export const fitnessGoals: FitnessGoal[] = [
+  'Lose Weight',
+  'Build Muscle',
+  'Improve Endurance',
+  'Increase Flexibility',
+  'Overall Health'
+];
+
+export const currentUser = users[0];
